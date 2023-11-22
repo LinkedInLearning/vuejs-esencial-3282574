@@ -130,140 +130,140 @@ export default {
     return {
       'tiquetes': [
         {
-          'id': '655ccd42afe1d7c616840195',
+          'id': '840195',
           'nombre': 'Juan',
           'categoria': 'Solicitud de equipo',
           'estado': 'Pendiente',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd425a8e7b166cc562d4',
+          'id': 'c562d4',
           'nombre': 'Marta',
           'categoria': 'Problema técnico',
           'estado': 'En progreso',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42526da4f2c8e2e1d7',
+          'id': 'e2e1d7',
           'nombre': 'Marcos',
           'categoria': 'Solicitud de equipo',
           'estado': 'Completado',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42aaff8b35178116c4',
+          'id': '8116c4',
           'nombre': 'María',
           'categoria': 'Acceso',
           'estado': 'Cerrado',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42d16b9d6e7c6e3761',
+          'id': '6e3761',
           'nombre': 'María',
           'categoria': 'Problema técnico',
           'estado': 'Pendiente',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd427d98ed2178a8621f',
+          'id': 'a8621f',
           'nombre': 'Leo',
           'categoria': 'Problema técnico',
           'estado': 'Completado',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42b1425d2d2458d1d2',
+          'id': '58d1d2',
           'nombre': 'Marcos',
           'categoria': 'Solicitud de equipo',
           'estado': 'Completado',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd4280c0147cb47c33da',
+          'id': '7c33da',
           'nombre': 'Leo',
           'categoria': 'Acceso',
           'estado': 'En progreso',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd426e55041abceaf5ae',
+          'id': 'eaf5ae',
           'nombre': 'María',
           'categoria': 'Problema técnico',
           'estado': 'Pendiente',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd4264906278e72c6e8a',
+          'id': '2c6e8a',
           'nombre': 'Leo',
           'categoria': 'Acceso',
           'estado': 'En progreso',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd421d412dcc8aa98ef1',
+          'id': 'a98ef1',
           'nombre': 'Carlos',
           'categoria': 'Acceso',
           'estado': 'Cerrado',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd4264ee00a5185a7366',
+          'id': '5a7366',
           'nombre': 'Marta',
           'categoria': 'Solicitud de equipo',
           'estado': 'Completado',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd4243c0b5d46a767bba',
+          'id': '767bba',
           'nombre': 'Jorge',
           'categoria': 'Consulta',
           'estado': 'En progreso',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd421d3733702d84635a',
+          'id': '84635a',
           'nombre': 'Marcos',
           'categoria': 'Consulta',
           'estado': 'Completado',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42b94bcd39cb2d27ad',
+          'id': '2d27ad',
           'nombre': 'Juan',
           'categoria': 'Solicitud de equipo',
           'estado': 'Pendiente',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42c0bd4697ba95244f',
+          'id': '95244f',
           'nombre': 'Juan',
           'categoria': 'Consulta',
           'estado': 'Pendiente',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42315feaff4dab4a07',
+          'id': 'ab4a07',
           'nombre': 'Ana',
           'categoria': 'Acceso',
           'estado': 'En progreso',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42dddecc3365171d3d',
+          'id': '171d3d',
           'nombre': 'Jorge',
           'categoria': 'Acceso',
           'estado': 'Completado',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42920ff372427e6fc8',
+          'id': '7e6fc8',
           'nombre': 'Carlos',
           'categoria': 'Solicitud de equipo',
           'estado': 'Cerrado',
           'asunto': 'No puedo acceder a mi cuenta'
         },
         {
-          'id': '655ccd42b1661432eb605508',
+          'id': '605508',
           'nombre': 'Juan',
           'categoria': 'Consulta',
           'estado': 'Pendiente',
