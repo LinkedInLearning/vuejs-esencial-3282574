@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vue.js con CDN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <div id="app">
+        <div class="container">
+              <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                <div class="container-fluid py-5">
+                  <h1 class="display-5 fw-bold">{{ titulo }}</h1>
+                  <p class="col-md-8 fs-4">{{ mensaje }}</p>
+                  <button class="btn btn-secondary btn-lg" type="button">Quiero saber más!</button>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    titulo: 'Vue.js',
+                    mensaje: 'Vue.js es increíblemente versátil y fácil de aprender, lo que lo convierte en una herramienta poderosa para crear interfaces de usuario dinámicas y atractivas en el desarrollo web moderno.'
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>
