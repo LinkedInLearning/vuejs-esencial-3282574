@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Componente Vue 3 sin SFC</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+<div id="app">
+  <mi-componente></mi-componente>
+</div>
+
+<script>
+// Define el componente de Vue
+const MiComponente = {
+  data() {
+    return {
+      message: '¡Hola desde Vue 3 sin SFC!'
+    };
+  },
+  template: `
+    <div class="container">
+      <h1>{{ message }}</h1>
+      <button @click="changeMessage">Cambiar Mensaje</button>
+    </div>
+  `,
+  methods: {
+    changeMessage() {
+      this.message = 'Mensaje cambiado';
+    }
+  }
+};
+
+// Crea una instancia de Vue y monta la aplicación
+const app = Vue.createApp({
+  components: {
+    'mi-componente': MiComponente
+  }
+});
+
+app.mount('#app');
+</script>
+
+<style>
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+</style>
+
+</body>
+</html>
