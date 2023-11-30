@@ -17,10 +17,15 @@
             <th scope='row'>{{ tiquete.id }}</th>
             <td>{{ tiquete.nombre }}</td>
             <td>{{ tiquete.categoria }}</td>
-            <td>{{ tiquete.estado }}</td>
+            <td :class="{
+              'bg-pendiente': tiquete.estado === 'Pendiente',
+              'bg-progreso': tiquete.estado === 'En progreso',
+              'bg-completo': tiquete.estado === 'Completado',
+              'bg-cerrado': tiquete.estado === 'Cerrado',
+              }">{{ tiquete.estado }}</td>
             <td>{{ tiquete.asunto }}</td>
             <td>
-              <button type='button' class='btn btn-outline-success btn-sm'>
+              <button type='button' class='btn btn-outline-primary btn-sm' @click="notificarClickTiquete(tiquete)">
                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-eye-fill'
                   viewBox='0 0 16 16'>
                   <path d='M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z' />
@@ -37,6 +42,25 @@
 <script>
 export default {
     name: 'ListaTiquetes',
-    props: ['tiquetes', 'titulo']
+    props: ['tiquetes', 'titulo'],
+    methods: {
+      notificarClickTiquete (tiquete){
+        this.$emit('tiqueteSeleccionado', tiquete);
+      }
+    }
 }
 </script>
+<style scoped>
+.bg-pendiente{
+  background-color: #ffe5d0;
+}
+.bg-progreso{
+  background-color: #d1e7dd;
+}
+.bg-completo{
+  background-color: #cff4fc;
+}
+.bg-cerrado{
+  background-color: #f8f9fa;
+}
+</style>
