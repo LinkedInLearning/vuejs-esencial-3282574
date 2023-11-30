@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de v-model en Vue.js</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+<div id="app">
+  <form @submit.prevent="handleSubmit">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" v-model="datosFormulario.nombre">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" v-model="datosFormulario.email">
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" v-model="datosFormulario.mensaje"></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div v-if="enviado">
+    <h2>Formulario Enviado</h2>
+    <p>Nombre: {{ datosFormulario.nombre }}</p>
+    <p>Email: {{ datosFormulario.email }}</p>
+    <p>Mensaje: {{ datosFormulario.mensaje }}</p>
+  </div>
+</div>
+
+<script>
+const app = Vue.createApp({
+  data() {
+    return {
+      datosFormulario: {
+        nombre: '',
+        email: '',
+        mensaje: ''
+      },
+      enviado: false
+    };
+  },
+  methods: {
+    handleSubmit() {
+      // Aquí puedes realizar operaciones con los datos del formulario
+      // En este ejemplo, simplemente establecemos enviado a true para mostrar los datos enviados
+      this.enviado = true;
+    }
+  }
+});
+
+app.mount('#app');
+</script>
+
+<style>
+/* Estilos para los elementos */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+label, input, textarea, button {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+</style>
+
+</body>
+</html>

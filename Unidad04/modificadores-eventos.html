@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Modificadores de Eventos en Vue.js</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+<div id="app">
+  <input type="text" @keyup.enter="handleEnter" placeholder="Presiona Enter (enter)">
+
+  <a href="https://www.linkedin.com/" @click.prevent="handleClick">Detener la propagación del evento</a>
+
+  <div @click="handleClick">
+    <div id="cuadro" @click.stop="handleClick"></div>
+  </div>
+
+</div>
+
+<script>
+const app = Vue.createApp({
+  methods: {
+    handleClick() {
+      alert('Manejar clic y evitar comportamiento por defecto');
+    },
+    handleEnter() {
+      alert('Manejar tecla Enter');
+    },
+  }
+});
+
+app.mount('#app');
+</script>
+
+<style>
+/* Estilos para los elementos */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+#app{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button, input, a {
+  display: block;
+  margin-bottom: 15px;
+}
+#cuadro{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+</style>
+
+</body>
+</html>

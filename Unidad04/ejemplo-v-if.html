@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Directivas Condicionales en Vue.js con Estilos</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+<div id="app">
+  <div class="contenedor">
+    <h2 v-if="mostrarEncabezado" class="encabezado">¡Encabezado Visible!</h2>
+    <p v-else class="encabezado">Encabezado oculto</p>
+
+    <div v-if="mostrarContenido" class="contenido">
+      <p>Este es el contenido principal.</p>
+    </div>
+    <div v-else class="contenido">
+      <p>El contenido está oculto actualmente.</p>
+    </div>
+
+    <button @click="cambiarElementos">revertir</button>
+  </div>
+</div>
+
+<script>
+const app = Vue.createApp({
+  data() {
+    return {
+      mostrarEncabezado: true,
+      mostrarContenido: true
+    };
+  },
+  methods: {
+    cambiarElementos() {
+      this.mostrarEncabezado = !this.mostrarEncabezado;
+      this.mostrarContenido = !this.mostrarContenido;
+    }
+  }
+});
+
+app.mount('#app');
+</script>
+
+<style>
+/* Estilos para los elementos */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contenedor {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.encabezado {
+  color: #fff;
+  background-color: #3498db;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contenido {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+</style>
+
+</body>
+</html>

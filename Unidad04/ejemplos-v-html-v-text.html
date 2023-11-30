@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Directivas de Vue.js</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+<div id="app">
+  <ul>
+    <li v-text="'Directiva v-text: ' + message"></li>
+    <li v-html="htmlContent"></li>
+  </ul>
+</div>
+
+<script>
+const app = Vue.createApp({
+  data() {
+    return {
+      message: 'Hola Mundo!',
+      htmlContent: '<strong>Texto HTML</strong>',
+    };
+  }
+});
+
+app.mount('#app');
+</script>
+
+</body>
+</html>

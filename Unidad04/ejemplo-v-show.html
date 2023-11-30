@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de v-show en Vue.js</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <button @click="toggleElement">Toggle Elemento</button>
+        <componente-hijo v-show="mostrarElemento"/>
+    </div>
+
+    <script>
+        const ComponenteHijo = {
+            data() {
+                return {
+                    mensaje: 'Este es un elemento que puede mostrarse u ocultarse.'
+                }
+            },
+            template: `
+            <div class="contenedor">
+                <input type="text" id="mensaje" v-model="mensaje">
+                {{ mensaje }}
+            </div>`,
+        };
+
+        const app = Vue.createApp({
+            data() {
+                return {
+                    mostrarElemento: true,
+                };
+            },
+            methods: {
+                toggleElement() {
+                    this.mostrarElemento = !this.mostrarElemento;
+                }
+            },
+            components: {
+                'componente-hijo': ComponenteHijo
+            }
+        });
+
+        app.mount('#app');
+    </script>
+
+    <style>
+        /* Estilos para los elementos */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        div {
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+</body>
+
+</html>

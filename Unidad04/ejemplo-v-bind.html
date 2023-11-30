@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Directiva v-bind en Vue.js</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+<div id="app">
+  <a v-bind:href="link">Ir a Vue.js</a>
+
+  <div v-bind:style="{ backgroundColor: bgColor, color: textColor }">
+    Este es un div con colores dinámicos.
+  </div>
+</div>
+
+<script>
+const app = Vue.createApp({
+  data() {
+    return {
+      link: 'https://vuejs.org/',
+      bgColor: 'lightblue',
+      textColor: 'black'
+    };
+  }
+});
+
+app.mount('#app');
+</script>
+
+<style>
+/* Estilos para los elementos */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+a {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #2980b9;
+}
+
+div {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+</style>
+
+</body>
+</html>

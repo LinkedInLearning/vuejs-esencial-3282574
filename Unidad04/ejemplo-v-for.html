@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de v-for en Vue.js con estilos</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+<div id="app">
+  <ul class="fruit-list">
+    <li v-for="(item, index) in items" :key="index" class="fruit-item">
+      {{ index + 1 }} - {{ item }}
+    </li>
+  </ul>
+</div>
+
+<script>
+const app = Vue.createApp({
+  data() {
+    return {
+      items: ['Manzana', 'Naranja', 'Plátano', 'Fresa']
+    };
+  }
+});
+
+app.mount('#app');
+</script>
+
+<style>
+/* Estilos para la lista y los elementos */
+.fruit-list {
+  list-style: none;
+  padding: 0;
+}
+
+.fruit-item {
+  background-color: #f7f7f7;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos alternados para los elementos pares e impares */
+.fruit-item:nth-child(even) {
+  background-color: #eaeaea;
+}
+</style>
+
+</body>
+</html>
