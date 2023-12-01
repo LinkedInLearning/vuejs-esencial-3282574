@@ -123,9 +123,14 @@ export default {
       return this.tiquetes.filter(tiquete => tiquete.estado === 'Pendiente' || tiquete.estado === 'En progreso')
     }
   },
+  watch: {
+    opcionSeleccionada () {
+      console.log(`Menú cambió!`);
+    }
+  },
   mounted: function () {
     this.opcionSeleccionada = this.OpcionesMenu.EnProgreso;
-  },
+  }
 }
 </script>
 

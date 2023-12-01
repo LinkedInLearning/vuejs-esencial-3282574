@@ -69,9 +69,28 @@ export default {
             this.$emit('clickGuardar', this.tiqueteMutable);
         }
     },
+    beforeCreate (){
+        console.log('1. beforeCreate');
+    },
+    created (){
+        console.log('2. created');
+    },
     mounted (){
         // Se coloca el puntero en el primer input en el formulario:
         this.$refs.inputNombre.focus();
+        console.log('3. mounted');
+    },
+    beforeUpdate (){
+        console.log('4. beforeUpdate');
+    },
+    updated (){
+        console.log('5. updated');
+    },
+    beforeUnmount (){
+        console.log('6. beforeUnmount');
+    },
+    unmounted (){
+        console.log('7. unmounted');
     },
     props: ['tiquete']
 }
