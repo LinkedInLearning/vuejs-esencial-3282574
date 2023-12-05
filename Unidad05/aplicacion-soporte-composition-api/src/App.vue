@@ -43,13 +43,15 @@
     </div>
   </nav>
   <main class='container'>
-    <FormularioTiquete :tiquete="tiqueteSeleccionado" @clickCerrar="cerrarFormulario" @clickGuardar="actualizarTiquete"
+  <transition>
+    <FormularioTiquete class="posicion" :tiquete="tiqueteSeleccionado" @clickCerrar="cerrarFormulario" @clickGuardar="actualizarTiquete"
       v-if="tiqueteSeleccionado !== undefined" />
-    <ListaTiquetes titulo="Tiquetes pendientes y en progreso" :tiquetes="pendientes"
+    <ListaTiquetes class="posicion" titulo="Tiquetes pendientes y en progreso" :tiquetes="pendientes"
       @tiqueteSeleccionado="mostrarInfoTiquete"
       v-else-if="opcionSeleccionada === OpcionesMenu.EnProgreso && tiqueteSeleccionado === undefined" />
-    <ListaTiquetes titulo="Tiquetes completos y cerrados" @tiqueteSeleccionado="mostrarInfoTiquete"
+    <ListaTiquetes class="posicion" titulo="Tiquetes completos y cerrados" @tiqueteSeleccionado="mostrarInfoTiquete"
       :tiquetes="completados" v-else />
+    </transition>
   </main>
 </template>
 
@@ -106,5 +108,20 @@ onMounted(() => { opcionSeleccionada.value = OpcionesMenu.EnProgreso; });
 <style>
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.posicion {
+  position: absolute;
+  background-color: white;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
