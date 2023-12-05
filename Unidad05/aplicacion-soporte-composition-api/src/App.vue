@@ -55,7 +55,7 @@
 
 <script setup>
 
-import { ref, reactive, computed, onMounted } from 'vue';
+import { ref, reactive, computed, onMounted, watch, onBeforeMount, onBeforeUpdate, onUpdated } from 'vue';
 
 import ListaTiquetes from './components/ListaTiquetes.vue';
 import FormularioTiquete from './components/FormularioTiquete.vue';
@@ -75,9 +75,14 @@ const pendientes = computed(() => tiquetes.filter(tiquete => tiquete.estado === 
 const opcionSeleccionada = ref(undefined);
 const tiqueteSeleccionado = ref(undefined);
 
+watch(opcionSeleccionada, () => {
+  console.log('Vista: ', opcionSeleccionada.value);
+});
+
 // Declaración de métodos:
 const cambiarOpcion = (opcion) => {
   opcionSeleccionada.value = opcion;
+  tiqueteSeleccionado.value = undefined;
 };
 
 const mostrarInfoTiquete = (tiquete) => {
@@ -99,7 +104,14 @@ const actualizarTiquete = (tiqueteInfo) => {
 };
 
 // Hooks se declaran utilizando funciones:
-onMounted(() => { opcionSeleccionada.value = OpcionesMenu.EnProgreso; });
+onMounted(() => {
+  console.log('onMounted');
+  opcionSeleccionada.value = OpcionesMenu.EnProgreso;
+});
+
+onBeforeMount(() => { console.log('onBeforeMount'); });
+onBeforeUpdate(() => { console.log('onBeforeUpdate'); });
+onUpdated(() => { console.log('onUpdated'); });
 
 </script>
 

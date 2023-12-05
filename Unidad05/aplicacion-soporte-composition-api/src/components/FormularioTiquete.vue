@@ -73,7 +73,7 @@ const guardarCambios = () => {
     emit('clickGuardar', tiqueteMutable.value);
 };
 
-// Declaración de hook:
+// Declaración de hook: 
 onMounted(() => {
     inputNombre.value.focus();
 });
