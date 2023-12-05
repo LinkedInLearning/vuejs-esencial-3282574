@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de proveedores en Vue.js</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+
+  <div id="app">
+    <div>
+      <p>Usuario actual: {{ usuarioActual.nombre }}</p>
+      <p>Correo electrónico: {{ usuarioActual.email }}</p>
+      <button @click="cambiarUsuario">Cambiar Usuario</button>
+
+      <componente-hijo />
+    </div>
+  </div>
+
+  <script>
+
+    const ComponenteNieto = {
+      template: `<div>
+    <p>Componente Nieto</p>
+    <p>Usuario desde el nieto: {{ usuarioActual.nombre }}</p>
+    <p>Correo electrónico desde el nieto: {{ usuarioActual.email }}</p>
+  </div>`,
+      setup() {
+        const usuarioActual = Vue.inject('usuarioActual');
+
+        return {
+          usuarioActual,
+        };
+      }
+    };
+    /*******************************************************/
+    const ComponenteHijo = {
+      template: `<p>Componente Hijo</p>
+      <componente-nieto />`,
+      components: {
+        'componente-nieto': ComponenteNieto,
+      }
+    };
+    /*******************************************************/
+    const app = Vue.createApp({
+      setup() {
+        const usuarioActual = Vue.ref({
+          nombre: 'Juan Perez',
+          email: 'juanperez@ejemplo.com'
+        });
+
+        const cambiarUsuario = () => {
+          usuarioActual.value = {
+            nombre: 'Ana María Perez',
+            email: 'anaperez@ejemplo.com'
+          };
+        };
+
+        Vue.provide('usuarioActual', usuarioActual);
+
+        return {
+          usuarioActual,
+          cambiarUsuario
+        };
+      },
+      components: {
+        'componente-hijo': ComponenteHijo,
+      },
+    });
+
+    app.mount('#app');
+  </script>
+
+  <style>
+    /* Estilos para los elementos */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    label,
+    input,
+    textarea,
+    button {
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+
+</body>
+
+</html>
