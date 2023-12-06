@@ -8,17 +8,23 @@ Consulta el archivo Readme en la rama main para obtener instrucciones e informac
 Aprende a aprovechar las características del framework Vue.js para crear interfaces web reactivas y de alto rendimiento. Conoce el proceso desde la instalación, herramientas y fundamentos básicos, desarrollo de la estructura inicial hasta la lectura de archivos externos, para ir paso a paso en la creación de una interfaz web interactiva desde cero con Vue.js.
 
 ## Instrucciones
-Este repositorio tiene ramas (branches) para cada uno de los vídeos del curso. Puedes usar el menú emergente de la rama en GitHub para cambiar a una rama específica y echar un vistazo al curso en esa etapa, o puedes añadir `/tree/nombre_de_la_rama` a la URL para ir a la rama a la que quieres acceder.
 
-## Ramas
-Las ramas están estructuradas para corresponder a los vídeos del curso. La convención de nomenclatura es Capítulo#_Vídeo#. Por ejemplo, la rama denominada `02_03` corresponde al segundo capítulo y al tercer vídeo de ese capítulo. Algunas ramas tendrán un estado inicial y otro final. Están marcadas con las letras i («inicio») y f («fin»). La branch i tiene el mismo código que al principio del vídeo. La branch f tiene el mismo código que al final del vídeo. La rama master tiene el estado final del código que aparece en el curso.
+Este repositorio no tiene ramas por lo que al descargar el repositorio completo obtendrás los archivos en su versión final.
+
+Cada carpeta en el directorio raíz corresponde a una unidad del curso y cada una tiene un nombre con un formato de `Unidad#unidad`. Cada carpeta contiene pequeñas aplicaciones de Vue.js correspondientes con los ejemplos de cada lección. Algunos ejemplos están compuestos de un solo archivo HTML que puede ejecutarse en el navegador directamente. Los otros son pequeños proyectos que requieren instalar `Node.js` y `npm` para poderlos correr. Para correr estos proyectos debes dirigirte a la carpeta del proyecto a travez de la Terminal (MacOs) o Command Prompt (Windows) y ejecutar los siguientes comandos:
+1. `npm install`
+2. `npm run serve`
+
+El último comando ejecutará un servidor local con una dirección similar a `http://localhost:8080`. Puedes utilizar esta url para ver tu aplicación en el navegador.
 
 ## Instalación
+
 1. Para utilizar estos archivos de ejercicios, debes tener descargado lo siguiente:
-	- [software]
-	
+   - [Node.js](https://nodejs.org/en/)
+   - Un editor de código ([VS Code](https://code.visualstudio.com/) es recomendado)
+   - Un navegador web
+
 2. Clona este repositorio en tu máquina local usando la Terminal (macOS) o CMD (Windows), o una herramienta GUI como SourceTree.
-3. [Instrucciones específicas del curso].
 
 ### Docente
 
