@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto my-5">
+    <div class="container px-10 my-5">
         <form @submit.prevent="validarDatos">
             <div class="space-y-12">
                 <div class="border-b border-gray-900/10 pb-12">
