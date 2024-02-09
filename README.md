@@ -33,8 +33,7 @@ El último comando ejecutará un servidor local con una dirección similar a `ht
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/natalia-corea).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com/learning/building-a-graphql-project-with-react-js
-[lil-thumbnail-url]: https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg
-
+[lil-course-url]: https://www.linkedin.com/learning/vue-js-esencial-23326716/
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/D560DAQGhJ7HGfeqwnw/learning-public-crop_675_1200/0/1707476782285?e=2147483647&v=beta&t=TG0lwp2mePbaGPHWPqqEnAfc4opzI6gN_e9nNW84or0
 
 [1]: # (End of ES-Instruction ###############################################################################################)
